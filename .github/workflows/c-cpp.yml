@@ -11,6 +11,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - name: setup
+      run: gcc demos/static.c -o staticd && ./staticd -c
     - name: configure
       run: ./configure
     - name: make
