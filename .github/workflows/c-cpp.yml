@@ -14,7 +14,7 @@ jobs:
     - name: setup
       run: gcc demos/static.c -o staticd && ./staticd -c
     - name: configure
-      run: ./configure
+      run: ./configure > /dev/null
     - name: make
       run: make
     - name: make check
